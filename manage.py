@@ -20,3 +20,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+# etelaat admin:
+# esm famil be ham chasbide hamechi koochik username e
+# password ham faghat esm akharesh test hamash koochik
