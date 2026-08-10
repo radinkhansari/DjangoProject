@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-{% load static  %}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         {% block title %}
-        Django App
+            Django App
         {% endblock %}
     </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <scrip src = "{% static 'js/main.js' %}" defer></script>
+    <script src="{% static 'js/main.js' %}" defer></script>
 </head>
 <body>
     <nav>
-        <a href = "/">🏠</a> |
-        <a href = "/about">😁</a> |
-        <a href = "/posts">📰</a> |
+        <a href="/">
+            <span role="img" aria-label="Home">🏠</span>
+        </a> | 
+        <a href="/about">
+            <span role="img" aria-label="About">😀</span>
+        </a> | 
+        <a href="{% url 'posts:list' %}">
+            <span role="img" aria-label="Posts">📰</span>
+        </a>
     </nav>
-    <main>   
+    <main>
         {% block content %}
-        {% endblock%}
-    </main> 
+        {% endblock %}
+    </main>
 </body>
 </html>
